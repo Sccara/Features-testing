@@ -1,17 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour, IDamageable
+public abstract class Character : MonoBehaviour
 {
-    public int health;
+    [SerializeField] public int health;
 
-    public int Health { get { return health; } set => health = value; }
+    public abstract void TakeDamage(int amount);
 
-    public void TakeDamage(int amount)
+    public abstract void Attack();
+
+    public void Move()
     {
-        health -= amount;
-        if (health <= 0)
-        {
-            Debug.Log("Health <= 0");
-        }
+        Debug.Log("Move");
     }
+
 }

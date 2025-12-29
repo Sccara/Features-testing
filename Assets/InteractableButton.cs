@@ -5,11 +5,13 @@ using UnityEngine.Events;
 
 public class InteractableButton : MonoBehaviour, IInteractable
 {
-    public static Action OnButtonPressed; // Створення події
+    //public static Action OnButtonPressed; // Створення події
+    public UnityEvent OnButtonPressed; // Створення події
 
     private void Awake()
     {
-        OnButtonPressed += PrintMessage; // Підписка на подію
+        //OnButtonPressed += PrintMessage; // Підписка на подію
+        //OnButtonPressed.AddListener(PrintMessage);
     }
 
     public void Interact(GameObject interactor)
@@ -26,6 +28,7 @@ public class InteractableButton : MonoBehaviour, IInteractable
 
     private void OnDestroy()
     {
-        OnButtonPressed -= PrintMessage; // Відписка від події
+        //OnButtonPressed -= PrintMessage; // Відписка від події
+        //OnButtonPressed.RemoveListener(PrintMessage);
     }
 }

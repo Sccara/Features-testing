@@ -22,13 +22,8 @@ public class PlayerController : MonoBehaviour
     {
         HandleMouseLook();
         HandleMovement();
-        HandleJump();
     }
 
-    void HandleJump()
-    {
-        // Jump logic
-    }
 
     void HandleMouseLook()
     {

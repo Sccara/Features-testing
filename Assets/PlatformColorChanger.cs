@@ -5,8 +5,8 @@ public class PlatformColorChanger : MonoBehaviour
 {
     private void Awake()
     {
-        InteractableButton.OnButtonPressed += ChangeColor;
-        InteractableButton.OnButtonPressed += MoveObject;
+        //InteractableButton.OnButtonPressed += ChangeColor;
+        //InteractableButton.OnButtonPressed += MoveObject;
     }
 
     public void ChangeColor()
@@ -21,7 +21,7 @@ public class PlatformColorChanger : MonoBehaviour
 
     private void OnDestroy()
     {
-        InteractableButton.OnButtonPressed -= ChangeColor;
-        InteractableButton.OnButtonPressed -= MoveObject;
+        //InteractableButton.OnButtonPressed -= ChangeColor;
+        //InteractableButton.OnButtonPressed -= MoveObject;
     }
 }
